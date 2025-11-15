@@ -1,77 +1,91 @@
-/* Footer general */
 .footer {
-  background-color: #222; /* Fondo oscuro para contraste */
-  color: white;
+  background-color: #102441;
+  color: #ffffff;
   padding: 2rem 1rem;
   font-family: "Roboto", sans-serif;
 }
 
-/* Contenedor flexible para 3 columnas */
 .footer-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-  max-width: 1200px;
+  max-width: 75rem;
   margin: auto;
   gap: 2rem;
 }
 
-/* Marca o logotipo */
 .footer-brand {
   flex: 1;
-  min-width: 200px;
+  min-width: 12.5rem;
 }
 
 .footer-logo {
-  width: 60px;
+  width: 3rem;
   height: auto;
   margin-bottom: 0.5rem;
+}
+
+.footer-brand p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.footer-brand small {
+  color: #cfe4ff;
 }
 
 /* Enlaces legales */
 .footer-links {
   flex: 1;
-  min-width: 200px;
+  min-width: 12.5rem;
+}
+
+.footer-links h4 {
+  color: #1bc467;
+  margin-bottom: 0.5rem;
 }
 
 .footer-links a {
   display: block;
-  color: #ccc;
+  color: #cce3ff;
   text-decoration: none;
   margin: 0.3rem 0;
 }
 
 .footer-links a:hover {
-  color: #fff;
+  color: #2371d7;
 }
 
-/* Redes sociales con íconos */
+/* Redes sociales */
 .footer-social {
   flex: 1;
-  min-width: 200px;
+  min-width: 12.5rem;
+}
+
+.footer-social h4 {
+  color: #1bc467;
+  margin-bottom: 0.5rem;
 }
 
 .social-icon {
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
   margin-right: 0.5rem;
+  filter: brightness(0) invert(1);
   transition: transform 0.2s ease-in-out;
 }
 
 .social-icon:hover {
   transform: scale(1.2);
+  filter: brightness(0) invert(1) drop-shadow(0 0 0.3rem #2371d7);
 }
 
-/* Responsive para pantallas pequeñas */
-@media (max-width: 768px) {
+/* Responsive */
+@media (max-width: 48rem) {
   .footer-container {
     flex-direction: column;
-    align-items: center;
     text-align: center;
-  }
-
-  .footer-social img {
-    margin-bottom: 0.5rem;
+    align-items: center;
   }
 }
