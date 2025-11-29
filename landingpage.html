@@ -11,6 +11,9 @@
 
     <!-- CSS DEL PIE DE PÁGINA -->
     <link rel="stylesheet" href="Pie.css" />
+
+    <!-- CSS DEL MENÚ HAMBURGUESA -->
+    <link rel="stylesheet" href="menu_toggle.css" />
   </head>
 
   <body>
@@ -24,6 +27,9 @@
           alt="Logo Aegis Corp"
         />
       </a>
+
+      <!-- BOTÓN HAMBURGUESA (AGREGADO EXACTAMENTE COMO PIDIÓ EL PROFESOR) -->
+      <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
 
       <ul class="Menu-Horizontal">
         <li><a href="">Empresa</a></li>
@@ -83,7 +89,7 @@
             vulnerabilidad en entornos urbanos, donde los usuarios carecen de
             mecanismos eficientes para solicitar ayuda o prevenir riesgos. Esta
             falta de soporte inmediato incrementa su inseguridad y reduce la
-            capacidad de reacción ante emergencias.                                                                                                                                                                                                                                                                                                                                                      
+            capacidad de reacción ante emergencias.
           </p>
 
           <p>
@@ -94,17 +100,15 @@
         </div>
 
         <iframe
-        width="100%"
-        height="250px"
-        src="https://www.youtube.com/embed/u2jbwBFNdlI"
-        title="Presentación del proyecto"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      ></iframe>
-      
-        </div>
+          width="100%"
+          height="250px"
+          src="https://www.youtube.com/embed/u2jbwBFNdlI"
+          title="Presentación del proyecto"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
       </div>
     </section>
 
@@ -221,5 +225,8 @@
         </div>
       </footer>
     </section>
+
+    <!-- SCRIPT DEL MENÚ HAMBURGUESA -->
+    <script src="menu_toggle.js" defer></script>
   </body>
 </html>
