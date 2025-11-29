@@ -1,55 +1,37 @@
-/* --- Ajustes para centrar y evitar que el botón se salga --- */
-
-/* 1) Evitar que el UL ocupe todo el ancho en desktop */
-.Menu-Horizontal {
-  width: auto; /* no forzar 100% en desktop */
-  flex: 0 1 auto; /* permite que ocupe solo lo necesario */
-  gap: 0.5rem; /* separación entre items en desktop */
-}
-
-/* 2) Alineación segura del botón (alineado vertical, espacio interno, no se sale) */
+/* BOTÓN HAMBURGUESA (ESCONDE EN DESKTOP) */
 .menu-toggle {
-  display: none; /* sigue oculto en desktop, mostrado en media query */
+  display: none;
   font-size: 2rem;
   background: none;
   border: none;
   cursor: pointer;
-  margin: 0 0.5rem; /* margen horizontal pequeño (izq y der) */
-  padding: 0.4rem; /* espacio interno para que no toque el borde */
-  align-self: center; /* asegura centrado vertical dentro del nav */
-  position: relative;
-  z-index: 1100;
-  box-sizing: border-box;
+
+  margin-right: 0.3rem; /* corregido */
+  padding: 0.4rem; /* espacio interno */
 }
 
-/* 3) Comportamiento móvil: botón visible, UL vertical full-width */
+/* RESPONSIVE: MÓVILES */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
-    color: white;
+    color: black;
   }
 
-  /* el menú vertical ocupa 100% solo en móvil */
   .Menu-Horizontal {
     display: none;
     flex-direction: column;
+    width: 100%;
+    background-color: #102441;
     position: absolute;
     top: 5rem;
     left: 0;
-    width: 100%;
-    background-color: #102441;
-    padding: 0;
-    margin: 0;
-    z-index: 999;
   }
 
   .Menu-Horizontal.active {
     display: flex;
   }
 
-  .Menu-Horizontal li a {
-    display: block;
-    color: white;
-    padding: 1rem 1.25rem;
+  .Menu-Horizontal li {
+    border-bottom: 1px solid #ccc;
   }
 }
