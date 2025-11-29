@@ -179,3 +179,12 @@
   color: #ffffff;
   font-weight: 600;
 }
+
+@media (max-width: 768px) {
+  .Menu-Horizontal li a {
+    color: white;
+    padding: 1rem;
+    display: block;
+    width: 100%;
+  }
+}
