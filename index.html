@@ -1,225 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Aegis Corp</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login con Clave Estática</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-    <!-- CSS PRINCIPAL -->
-    <link rel="stylesheet" href="styles.css" />
+    <section class="login-container">
+        
+        <div class="login-box">
+            <h2>Acceso Restringido</h2>
+            
+            <form onsubmit="return validarLogin(event);">
+                
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Introduce tu email" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">Clave de Acceso (ok)</label>
+                    <input type="password" id="password" name="password" placeholder="Introduce la clave secreta" required>
+                </div>
+                
+                <button type="submit" class="login-button">Iniciar Sesión</button>
+            </form>
 
-    <!-- CSS DEL PIE DE PÁGINA -->
-    <link rel="stylesheet" href="Pie.css" />
-  </head>
-
-  <body>
-    <!--MENU TOPHEADER-->
-    <nav class="topheader">
-      <a href="" class="logo">
-        <img
-          width="50"
-          height="50"
-          src="logos/logo.png"
-          alt="Logo Aegis Corp"
-        />
-      </a>
-
-      <ul class="Menu-Horizontal">
-        <li><a href="">Empresa</a></li>
-        <li>
-          <a href="">Proyecto</a>
-          <ul class="Menu-Vertical">
-            <li><a href="">Quiénes Somos</a></li>
-            <li><a href="">Problemática</a></li>
-            <li><a href="">Solución</a></li>
-            <li><a href="#contactanos">Contacto</a></li>
-          </ul>
-        </li>
-        <li><a href="">Investigación</a></li>
-        <li><a href="">Socios</a></li>
-        <li><a href="#contactanos">Login</a></li>
-      </ul>
-    </nav>
-
-    <!--SECCION EMPRESA-->
-    <section class="seccion-promo">
-      <div class="div-gral-promo">
-        <div class="div-promo-texto">
-          <h2>Quiénes Somos</h2>
-
-          <p>
-            Aegis Corp es una empresa dedicada al desarrollo de soluciones
-            tecnológicas enfocadas en la seguridad y bienestar del usuario.
-            Nuestro propósito es ofrecer herramientas digitales confiables que
-            permitan prevenir riesgos y brindar apoyo en situaciones donde la
-            protección personal es prioritaria.
-          </p>
-
-          <p>
-            A través de análisis de datos, investigación cualitativa y
-            metodologías centradas en el usuario, identificamos necesidades
-            reales para diseñar soluciones accesibles, modernas y alineadas con
-            los desafíos actuales de seguridad ciudadana.
-          </p>
-
-          <button>Leer más...</button>
-        </div>
-
-        <div class="div-promo-img">
-          <img src="logos/promotora-3.jpg" alt="Imagen corporativa" />
-        </div>
-      </div>
+        </div> 
     </section>
 
-    <!--SECCION PROBLEMÁTICA-->
-    <section class="seccion-privi">
-      <div class="div-gral-privi">
-        <div class="div-privi-texto">
-          <h2>Problemática Identificada</h2>
-
-          <p>
-            Durante el proceso de investigación se detectaron situaciones de
-            vulnerabilidad en entornos urbanos, donde los usuarios carecen de
-            mecanismos eficientes para solicitar ayuda o prevenir riesgos. Esta
-            falta de soporte inmediato incrementa su inseguridad y reduce la
-            capacidad de reacción ante emergencias.                                                                                                                                                                                                                                                                                                                                                      
-          </p>
-
-          <p>
-            Con base en estos hallazgos, se definió una propuesta tecnológica
-            centrada en acompañamiento, prevención y acceso rápido a recursos,
-            sustentada en metodologías Lean UX y validación con usuarios reales.
-          </p>
-        </div>
-
-        <iframe
-        width="100%"
-        height="250px"
-        src="https://www.youtube.com/embed/u2jbwBFNdlI"
-        title="Presentación del proyecto"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      ></iframe>
-      
-        </div>
-      </div>
-    </section>
-
-    <!--FORMULARIO-->
-    <section class="seccion-formulario" id="contactanos">
-      <div class="div-cont-formulario">
-        <h2>Formulario de Contacto</h2>
-        <p>Comparta sus datos para recibir información detallada.</p>
-
-        <form class="formulario">
-          <div class="campo">
-            <label for="nombre">Nombre Completo:</label>
-            <input
-              type="text"
-              id="nombre"
-              name="nombre"
-              placeholder="Ingrese su nombre"
-            />
-          </div>
-
-          <div class="campo">
-            <label for="pais">País:</label>
-            <select id="pais" name="pais">
-              <option value="">Seleccione un país</option>
-              <option value="peru">Perú</option>
-              <option value="argentina">Argentina</option>
-              <option value="brasil">Brasil</option>
-            </select>
-          </div>
-
-          <div class="campo">
-            <label>Intereses:</label>
-            <ul class="lista-checkbox">
-              <li>
-                <label><input type="checkbox" />Seguridad Digital</label>
-              </li>
-              <li>
-                <label><input type="checkbox" />Tecnología</label>
-              </li>
-              <li>
-                <label><input type="checkbox" />Innovación</label>
-              </li>
-              <li>
-                <label><input type="checkbox" />Aplicaciones Móviles</label>
-              </li>
-            </ul>
-          </div>
-
-          <div class="campo">
-            <label>Género:</label>
-            <ul class="lista-radio">
-              <li>
-                <label
-                  ><input type="radio" name="sexo" value="m" />Masculino</label
-                >
-              </li>
-              <li>
-                <label
-                  ><input type="radio" name="sexo" value="f" />Femenino</label
-                >
-              </li>
-            </ul>
-          </div>
-
-          <button type="submit">Enviar</button>
-        </form>
-      </div>
-    </section>
-
-    <!-- PIE DE PAGINA -->
-    <section id="footer">
-      <footer class="footer">
-        <div class="footer-container">
-          <div class="footer-brand">
-            <img src="logos/logo.png" alt="Logo" class="footer-logo" />
-            <p>Aegis Corp</p>
-            <small>© 2025 Todos los derechos reservados</small>
-          </div>
-
-          <div class="footer-links">
-            <h4>Legal</h4>
-            <a href="NormasLegales.pdf">Política de Privacidad</a>
-            <a href="NormasLegales.pdf">Términos y Condiciones</a>
-            <a href="NormasLegales.pdf">Protección de Datos</a>
-          </div>
-
-          <div class="footer-social">
-            <h4>Síguenos</h4>
-            <a href="#"
-              ><img
-                src="https://cdn-icons-png.flaticon.com/512/145/145802.png"
-                alt="Facebook"
-                class="social-icon"
-            /></a>
-            <a href="#"
-              ><img
-                src="https://cdn-icons-png.flaticon.com/512/145/145812.png"
-                alt="Instagram"
-                class="social-icon"
-            /></a>
-            <a href="#"
-              ><img
-                src="https://cdn-icons-png.flaticon.com/512/145/145807.png"
-                alt="LinkedIn"
-                class="social-icon"
-            /></a>
-            <a href="#"
-              ><img
-                src="https://cdn-icons-png.flaticon.com/512/145/145806.png"
-                alt="Twitter"
-                class="social-icon"
-            /></a>
-          </div>
-        </div>
-      </footer>
-    </section>
-  </body>
+    <script src="login.js"></script>
+    
+</body>
 </html>
